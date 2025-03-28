@@ -16,10 +16,9 @@ export const NavBar = () => {
       return navigate("/login");
     } catch (error) {
       //redirect to error page
-      console.log("error while logout");
     }
   };
-  console.log(user);
+  //console.log(user);
   return (
     <div className="navbar bg-base-300">
       <div className="flex-1">

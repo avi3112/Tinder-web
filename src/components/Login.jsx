@@ -27,7 +27,6 @@ export const Login = () => {
       //dont know why comment one not working
       //setError(err?.response?.data || "somthing went wrong");
       setError("somthing went wrong");
-      console.log(error);
     }
   };
   return (

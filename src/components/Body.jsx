@@ -12,7 +12,8 @@ export const Body = () => {
   const Navigate = useNavigate();
   const userData = useSelector((store) => store.user);
   const fetchUser = async () => {
-    if (userData) return;
+    // if (userData) return;
+    if (userData && userData._id) return;
     try {
       const res = await axios.get(Base_URl + "/profile", {
         withCredentials: true,
@@ -22,8 +23,6 @@ export const Body = () => {
       if (error.status === 401) {
         Navigate("/login");
       }
-
-      console.log(error);
     }
   };
   useEffect(() => {

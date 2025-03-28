@@ -5,7 +5,6 @@ import { Login } from "./components/Login";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import { Feed } from "./components/Feed";
-
 function App() {
   return (
     <>
