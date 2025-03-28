@@ -7,6 +7,7 @@ import { addUser } from "../utils/userSlice";
 export const Login = () => {
   const [emailID, setEmailId] = useState("elon@gmail,com");
   const [password, setPassword] = useState("elon@123");
+  const [error, setError] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleLogin = async () => {
@@ -22,7 +23,10 @@ export const Login = () => {
       // console.log(res.data);
       dispatch(addUser(res.data));
       return navigate("/");
-    } catch (error) {
+    } catch (err) {
+      //dont know why comment one not working
+      //setError(err?.response?.data || "somthing went wrong");
+      setError("somthing went wrong");
       console.log(error);
     }
   };
@@ -53,6 +57,7 @@ export const Login = () => {
               />
             </fieldset>
           </div>
+          <a className="text-red-500">{error}</a>
           <div className="card-actions justify-center">
             <button className="btn btn-primary" onClick={handleLogin}>
               Login
