@@ -1,6 +1,6 @@
 import React from "react";
 
-export const UserCard = ({ user }) => {
+export const UserCard = ({ user = {} }) => {
   const { firstName, lastName, photoUrl, age, gender, about } = user;
   console.log(user);
   return (
