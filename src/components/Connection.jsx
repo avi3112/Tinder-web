@@ -47,7 +47,7 @@ export const Connection = () => {
                 {firstName + " " + lastName}
               </h2>
               <p>{about}</p>
-              <p>{age + " " + gender}</p>
+              {/* <p>{age + " " + gender}</p> */}
             </div>
           </div>
         );
